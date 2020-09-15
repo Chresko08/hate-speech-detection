@@ -15,7 +15,7 @@
         $.post("predict.php",{
             tweet: tweets
         },function(data,status){
-          alert(data);
+          alert($data);
         });
       });
   });
@@ -189,7 +189,6 @@
           <form action="#" autocomplete="off" class="slides-form margin-bottom-3">
             <textarea class="left wide ae-2" id="tweet" type="text" name="tweet" placeholder="Enter text here" required></textarea>
             <button type="button" class="button big wide green gradient ae-3 fromRight" name="predict" id="predict" >Predict</button>
-            <p id="result" name="result">Hello Friend</p>
           </form>
         </div>
 

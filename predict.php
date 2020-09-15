@@ -2,6 +2,6 @@
 //Receive POST Parameters
 
 $tweets=$_POST["tweets"];
-system("/usr/anaconda/bin/python3 Test.py ".$tweets." 2>&1");
+system("location_of installed_python3_cmd_launcher testing_model.py ".$tweets." 2>&1");
 
 ?>
