@@ -6,12 +6,25 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 
 	<title>Hate Speech Detection</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+<script>
+  $(document).ready(function(){
+      $("#predict").click(function(){
+        var tweets = $("#tweet").val();
+        $.post("predict.php",{
+            tweet: tweets
+        },function(data,status){
+          alert(data);
+        });
+      });
+  });
+</script>
+
+  <script src="js/slides.min.js?423331" type="text/javascript"></script>
 
 	<link href="css/slides.min.css?423331" rel="stylesheet" type="text/css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-	<script src="js/slides.min.js?423331" type="text/javascript"></script>
 
 	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,600,800|Playfair Display:400|Material+Icons"/>
 	<style type="text/css">
@@ -175,7 +188,8 @@
           <h1 class="huge ae-1 margin-bottom-3">Enter your tweet here.</h1>
           <form action="#" autocomplete="off" class="slides-form margin-bottom-3">
             <textarea class="left wide ae-2" id="tweet" type="text" name="tweet" placeholder="Enter text here" required></textarea>
-            <button type="submit" class="button big wide green gradient ae-3 fromRight" name="predict" id="predict">Predict</button>
+            <button type="button" class="button big wide green gradient ae-3 fromRight" name="predict" id="predict" >Predict</button>
+            <p id="result" name="result">Hello Friend</p>
           </form>
         </div>
 
@@ -214,25 +228,10 @@
     </div>
   </div>
   <div class="background" style="background-image:url(assets/img/background/img1.jpg)"></div>
+
+
 </section>
-
-
-
-<script>
-	$(document).ready(function(){
-		$("#predict").click(function(){
-			var tweet = $("#tweet").val();
-			$.post("predict.php","tweet"=tweet, function(response){
-				alert($response);
-				$(#predict).name="Hello"
-			})
-		})
-	})
-	
-</script>
-
-
-
-
 </body>
+
+
 </html>
