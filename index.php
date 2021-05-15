@@ -10,13 +10,10 @@
  
 <script>
   $(document).ready(function(){
-      $("#predict").click(function(){
+      $("#predict").click(function()
+      {
         var tweets = $("#tweet").val();
-        $.post("predict.php",{
-            tweet: tweets
-        },function(data,status){
-          alert($data);
-        });
+        $.post("predict.php",{tweet: tweets},function(data,status){alert($data);});
       });
   });
 </script>
@@ -141,7 +138,7 @@
 
         <div class="fix-10-12">
           <h1 class="huge ae-2 margin-bottom-2">Hate Speech Detection</h1>
-          <div class="ae-3"><p class="hero opacity-8">This model detects that a post,tweet or comment is a hate or offensive one or not with 95% accuracy.</p></div>
+          <div class="ae-3"><p class="hero opacity-8">This model detects that a post,tweet or comment is a hate or offensive one or not , with 95% accuracy.</p></div>
           
         </div>
         <div class="fix-11-12 margin-top-5">
