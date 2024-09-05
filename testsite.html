@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Title of the document</title>
+  </head>
+  <body>
+    <p>There is a hidden message for you. Click to see it.</p>
+    <input type="text" name="tweet" id="tweet">
+    <button onclick="myFunction()">Click me!</button>
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("tweet").value;
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+  </body>
